@@ -25,19 +25,15 @@ public class Taula {
                 printFitxer.format("%2d x %2d = %3d    ", multiplicant, multiplicador, res);
                 multiplicant++;
             }
-            if (x == 9) {
-                printFitxer.append("\n");
-                multiplicant = 6;
-                multiplicador = 0;
-            }
-            if (x >= 9) {
-                multiplicant = 6;
-                multiplicador++;
-                printFitxer.append("\n");
-            } else {
+            if (x < 9) {
                 multiplicant = 1;
                 multiplicador++;
                 printFitxer.append("\n");
+            } else {
+                if (x == 9) multiplicador = 0;
+                multiplicant = 6;
+                multiplicador++;
+                printFitxer.append(x == 9 ? "\n\n" : "\n");
             }
 
         }
