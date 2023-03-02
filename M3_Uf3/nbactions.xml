@@ -12,8 +12,8 @@
             <properties>
                 <exec.vmArgs></exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
-                <exec.appArgs>"ordenat1.txt" "ordenat2.txt" "ordenat3.txt"</exec.appArgs>
-                <exec.mainClass>a9_exemple_examen.FusionarFitxers</exec.mainClass>
+                <exec.appArgs>"entradaError2.txt" "sortida.txt"</exec.appArgs>
+                <exec.mainClass>Examen.Exercici2</exec.mainClass>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
@@ -29,8 +29,8 @@
             <properties>
                 <exec.vmArgs>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
-                <exec.appArgs>"ordenat1.txt" "ordenat2.txt" "ordenat3.txt"</exec.appArgs>
-                <exec.mainClass>a9_exemple_examen.FusionarFitxers</exec.mainClass>
+                <exec.appArgs>"entradaError2.txt" "sortida.txt"</exec.appArgs>
+                <exec.mainClass>Examen.Exercici2</exec.mainClass>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
             </properties>
@@ -47,9 +47,9 @@
             <properties>
                 <exec.vmArgs></exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
-                <exec.mainClass>a9_exemple_examen.FusionarFitxers</exec.mainClass>
+                <exec.mainClass>Examen.Exercici2</exec.mainClass>
                 <exec.executable>java</exec.executable>
-                <exec.appArgs>"ordenat1.txt" "ordenat2.txt" "ordenat3.txt"</exec.appArgs>
+                <exec.appArgs>"entradaError2.txt" "sortida.txt"</exec.appArgs>
             </properties>
         </action>
     </actions>

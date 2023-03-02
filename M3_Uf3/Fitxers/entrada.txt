@@ -1,0 +1,11 @@
+10
+pereg 5 0 0 0 0
+juamna 4 0 0 0 0
+gerard 0 0 3 0 0
+fernando 0 0 0 1 0
+perec  0 0 0 0 10
+toni 1 0 0 3 0
+d 0 1 0 0 0
+gamma 0 3 3 4 0
+super 1 2 3 4 50
+man 3 3 3 2 2
