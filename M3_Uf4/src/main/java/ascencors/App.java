@@ -2,7 +2,7 @@ package ascencors;
 
 /**
  *
- * @author funes
+ * @author rocbigas
  */
 public class App {
 
