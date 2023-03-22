@@ -1,6 +1,5 @@
 package a4;
 
-import a4.plujaformes.PlujaFormesV2;
 import java.awt.Color;
 import java.awt.Point;
 import static java.util.concurrent.ThreadLocalRandom.current;
@@ -42,12 +41,12 @@ public class Rectangle extends Figura {
         joc.rect(getPosicio().x, getPosicio().y, (float) base, (float) alçada);
     }
 
-    public static Rectangle randomRectangle() {
-        Rectangle rectangle = new Rectangle (
-                PlujaFormesV2.COLORS[current().nextInt(0, 17)],
-                new Point(current().nextInt(0, 1280), current().nextInt(0, 720)),
-                current().nextDouble(100, 300),
-                current().nextDouble(100, 300));
+    public static Rectangle randomRectangle(Point limit, float minHeight, float maxHeight, float minWidth, float maxWidth) {
+        Rectangle rectangle = new Rectangle(
+                COLORS[current().nextInt(0, 17)],
+                new Point(current().nextInt(0, limit.x), current().nextInt(0, limit.y)),
+                current().nextDouble(minWidth, maxWidth),
+                current().nextDouble(minHeight, maxHeight));
         return rectangle;
     }
 

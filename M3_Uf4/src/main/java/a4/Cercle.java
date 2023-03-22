@@ -1,7 +1,7 @@
 package a4;
 
-import a4.plujaformes.PlujaFormes;
-import a4.plujaformes.PlujaFormesV2;
+//import a4.plujaformes.PlujaFormes;
+//import a4.plujaformes.PlujaFormesV2;
 import java.awt.Color;
 import java.awt.Point;
 import static java.util.concurrent.ThreadLocalRandom.current;
@@ -34,11 +34,11 @@ public class Cercle extends Figura {
         joc.ellipse(getPosicio().x, getPosicio().y, diametre, diametre);
     }
 
-    public static Cercle randomCercle() {
+    public static Cercle randomCercle(Point limit, float minRadi, float maxRadi) {
         Cercle cercle = new Cercle(
-                PlujaFormesV2.COLORS[current().nextInt(0, 17)],
-                new Point(current().nextInt(0, 1280), current().nextInt(0, 720)),
-                current().nextDouble(100, 200));
+                COLORS[current().nextInt(0, 17)],
+                new Point(current().nextInt(0, limit.x), current().nextInt(0, limit.y)),
+                current().nextDouble(minRadi, maxRadi));
         return cercle;
     }
 
