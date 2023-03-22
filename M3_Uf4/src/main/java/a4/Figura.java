@@ -29,7 +29,7 @@ public class Figura {
         this.color = color;
     }
 
-    public void setPosi(Point posicio) {
+    public void setPosicio(Point posicio) {
         this.posicio = posicio;
     }
 }
