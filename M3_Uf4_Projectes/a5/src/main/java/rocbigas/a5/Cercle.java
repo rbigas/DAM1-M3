@@ -1,7 +1,5 @@
 package rocbigas.a5;
 
-//import a4.plujaformes.PlujaFormes;
-//import a4.plujaformes.PlujaFormesV2;
 import java.awt.Color;
 import java.awt.Point;
 import static java.util.concurrent.ThreadLocalRandom.current;
