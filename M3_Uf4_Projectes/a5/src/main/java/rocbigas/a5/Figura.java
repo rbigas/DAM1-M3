@@ -9,18 +9,24 @@ import static java.util.concurrent.ThreadLocalRandom.current;
  * @author rocbigas
  */
 public class Figura {
-    
+
     public static final Color[] COLORS = {new Color(255, 0, 102), new Color(255, 102, 0), new Color(255, 204, 0), new Color(51, 255, 0), new Color(0, 153, 255), new Color(153, 0, 255), new Color(255, 0, 204), new Color(102, 255, 255), new Color(204, 255, 0), new Color(204, 102, 255), new Color(255, 153, 0), new Color(0, 255, 204), new Color(255, 0, 255), new Color(204, 255, 0), new Color(0, 255, 204), new Color(102, 0, 204), new Color(204, 0, 0), new Color(204, 102, 0)};
-    private static int nFiguraTotal = 0;
+    private static int nFiguraTotal;
     private Color color;
     private Point posicio;
+    private final int id;
 
     public Figura(Color color, Point posicio) {
         this.color = color;
         this.posicio = posicio;
         nFiguraTotal++;
+        this.id = nFiguraTotal;
     }
 
+    public int getId() {
+        return id;
+    }
+    
     public static int getNFiguraTotal() {
         return nFiguraTotal;
     }
@@ -45,9 +51,16 @@ public class Figura {
         this.posicio = posicio;
     }
 
+    public static void printNFiguresTotal() {
+        System.out.println("Figures creades: " + nFiguraTotal);
+    }
+
     @Override
     public String toString() {
-        return "Figura{" + "color=" + color + ", posicio=" + posicio + '}';
+        return String.format(
+                "    Color: %s%n"
+                + "    Posició: %s%n",
+                color, posicio);
     }
 
     public Point randomPoint(Point posi, Point limit, int salt) {

@@ -2,7 +2,6 @@ package rocbigas.a5;
 
 import java.awt.Color;
 import java.awt.Point;
-import static java.util.concurrent.ThreadLocalRandom.current;
 import processing.core.PApplet;
 
 /**
@@ -42,16 +41,14 @@ public class Cercle extends Figura {
         joc.ellipse(getPosicio().x, getPosicio().y, diametre, diametre);
     }
 
-    public static Cercle randomCercle(Point limit, float minRadi, float maxRadi) {
-        Cercle cercle = new Cercle(
-                COLORS[current().nextInt(0, 17)],
-                new Point(current().nextInt(0, limit.x), current().nextInt(0, limit.y)),
-                current().nextDouble(minRadi, maxRadi));
-        return cercle;
-    }
-
     @Override
     public String toString() {
-        return "Cercle {" + "Color: " + getColor() + ", Posició: " + getPosicio() + ", Radi: " + radi + '}';
+        return String.format(
+                "Cercle:%n"
+                + super.toString()
+                + "    Radi: %s%n"
+                + "    Cercles creats: %s",
+                radi, nCercleTotal
+        );
     }
 }

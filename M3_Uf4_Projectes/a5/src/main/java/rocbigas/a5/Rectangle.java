@@ -2,7 +2,6 @@ package rocbigas.a5;
 
 import java.awt.Color;
 import java.awt.Point;
-import static java.util.concurrent.ThreadLocalRandom.current;
 import processing.core.PApplet;
 
 /**
@@ -51,18 +50,16 @@ public class Rectangle extends Figura {
         joc.rect(getPosicio().x, getPosicio().y, (float) base, (float) alçada);
     }
 
-    public static Rectangle randomRectangle(Point limit, float minHeight, float maxHeight, float minWidth, float maxWidth) {
-        Rectangle rectangle = new Rectangle(
-                COLORS[current().nextInt(0, 17)],
-                new Point(current().nextInt(0, limit.x), current().nextInt(0, limit.y)),
-                current().nextDouble(minWidth, maxWidth),
-                current().nextDouble(minHeight, maxHeight));
-        return rectangle;
-    }
-
     @Override
     public String toString() {
-        return "Rectangle {" + "Color: " + getColor() + ", Posició: " + getPosicio() + ", Base: " + getBase() + ", Alçada: " + getAlçada() + '}';
+        return String.format(
+                "%nRectangle:%n"
+                + super.toString()
+                + "    Base: %s%n"
+                + "    Alçada: %s%n"
+                + "    Rectangles creats: %s",
+                base, alçada, nRectangleTotal
+        );
     }
 
 }
