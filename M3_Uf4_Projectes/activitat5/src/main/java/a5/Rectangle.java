@@ -1,4 +1,4 @@
-package rocbigas.a5;
+package a5;
 
 import java.awt.Color;
 import java.awt.Point;

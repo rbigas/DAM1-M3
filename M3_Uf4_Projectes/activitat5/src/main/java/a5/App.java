@@ -1,4 +1,4 @@
-package rocbigas.a5;
+package a5;
 
 import java.awt.Color;
 import java.awt.Point;
@@ -19,6 +19,5 @@ public class App {
         Figura.printNFiguresTotal();
         System.out.println(c1.toString());
         System.out.println(r1.toString());
-        System.out.println("\nID de c1: " + c1.getId());
     }
 }
