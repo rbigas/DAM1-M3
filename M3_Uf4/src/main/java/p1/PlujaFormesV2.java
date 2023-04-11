@@ -47,7 +47,7 @@ public class PlujaFormesV2 extends PApplet {
 
     @Override
     public void settings() {
-        this.size(1280, 720);
+        this.size(200, 200);
     }
 
     @Override
